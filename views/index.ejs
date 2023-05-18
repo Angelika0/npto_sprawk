@@ -1,0 +1,19 @@
+<%-include('naglowek') %>
+    <ul>
+        <% wpisy.forEach(function(val, index){ %>
+
+            <li>
+                <b> <%= val.tytul %></b>
+                <a href="/usun/<%= index %>">usuń</a>
+                <a href="/edytuj/<%= index %>">edytuj</a>
+
+                <p>
+                    <%= val.tresc %>
+                </p>
+            </li>
+
+        <% })%>
+        
+
+    </ul>
+<%-include('stopka') %>

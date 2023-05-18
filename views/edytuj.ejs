@@ -1,0 +1,16 @@
+<%-include('naglowek') %>
+<h2>Formularz edycji wpisu </h2>
+<form method="POST" action="/edytuj/<%= id %>">
+
+    <p>
+        Tytuł:<br/>
+        <input type="text" name="tytul" value="<%= wpis.tytul %>" />
+    </p>
+    <p>
+        Treść:<br/>
+        <textarea name="tresc" ><%= wpis.tresc %></textarea>
+    </p>
+    <button type="submit">zapisz zmiany</button>
+
+</form>
+<%-include('stopka') %>
